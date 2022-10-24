@@ -5,7 +5,8 @@ function Navbar() {
   return (
     <nav className="flex justify-between navbar">
       <Link to="/">Accueil</Link>
-      <Link to="/Page1">Page1</Link>
+      <Link to="/Competentes">Compétences</Link>
+      <Link to="/Portefolio">Mon Portefolio</Link>
       <Link to="/Contact">Contact</Link>
     </nav>
   );

@@ -1,29 +1,68 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
+import Me from "./Me";
+import competencesData from "../data/competencesData";
+import projetsData from "../data/projetsData";
 
 export default function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const handleDragStart = (e) => e.preventDefault();
+
+  const items = projetsData.map((el) => (
+    <a
+      href={el.link}
+      target="_blank"
+      rel="noreferrer"
+      onDragStart={handleDragStart}
+      className="flex-col align-center justify-content"
+    >
+      <h3>{el.name}</h3>
+      <img src={el.src} alt={el.alt} className="projets" />
+      <p>{el.description}</p>
+    </a>
+  ));
   return (
     <main>
-      <h1>Hello this is Home</h1>
+      <section className="landing_page relative">
+        <h1>Charles Girouard</h1>
+        <h2>Data Analyst | Data Scientist</h2>
+        <div className="background_img" />
+        <div className="veil" />
+      </section>
 
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus
-        aliquid vel blanditiis. Iste earum tempore, corrupti distinctio nam
-        dignissimos incidunt eveniet in tempora libero! Possimus explicabo
-        architecto aut dolorem blanditiis magni porro maiores dignissimos
-        repellat rem voluptatum, magnam provident at illum atque fugit assumenda
-        eaque minima iste. Quaerat odit suscipit possimus nostrum, libero odio
-        est quo culpa tempore ex tenetur sed esse unde doloremque ea minus rerum
-        laboriosam eveniet labore ipsam voluptate officiis fugiat. Natus minima
-        voluptatem hic eum ad perferendis rerum animi, provident aliquid
-        quisquam, mollitia eaque enim eligendi consequatur nihil eveniet ex
-        corrupti delectus quidem consequuntur! Saepe repudiandae excepturi ut
-        atque dolorum quisquam voluptas laudantium sapiente, obcaecati
-        voluptatibus earum adipisci dolor maiores beatae delectus ab pariatur!
-        Fuga voluptatibus soluta quidem alias suscipit animi, nisi dolorum
-        adipisci veritatis veniam amet aut odio magni, nihil nobis fugit iste
-        expedita ut nulla quas consequuntur debitis? Nihil ipsam dicta saepe
-        temporibus molestiae!
-      </p>
+      <Me />
+
+      <section>
+        <article className="flex-col align-center justify-center background2 background">
+          <h2>Les compétences</h2>
+
+          <div className="competences_container flex wrap justify-center align-center">
+            {competencesData.map((data) => (
+              <div className="flex-col justify-center align-center">
+                <img src={data.src} alt={data.alt} className="competences" />
+                <h3>{data.title}</h3>
+              </div>
+            ))}
+          </div>
+        </article>
+      </section>
+      <section className="flex-col justify-center align-center margin1r0">
+        <h2>Mes projets</h2>
+        <AliceCarousel
+          autoPlay
+          disableButtonsControls
+          disableDotsControls
+          disableSlideInfo
+          infinite
+          animationDuration="6000"
+          mouseTracking
+          items={items}
+        />
+      </section>
     </main>
   );
 }

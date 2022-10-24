@@ -2,7 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import Page1 from "./pages/Page1";
+import Competences from "./pages/Competences";
+import Portefolio from "./pages/Portefolio";
 import Contact from "./pages/Contact";
 import Mentions from "./pages/Mentions";
 
@@ -14,7 +15,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Page1" element={<Page1 />} />
+        <Route path="/Competences" element={<Competences />} />
+        <Route path="/Portefolio" element={<Portefolio />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Mentions" element={<Mentions />} />
       </Routes>

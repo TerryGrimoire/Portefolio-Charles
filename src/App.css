@@ -1,5 +1,6 @@
 /********************************************************************* CSS VARIABLES *********************************************************************/ 
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Mukta:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Galdeano&display=swap');
 :root {
 
   --main-bg-color : #FFFFFF;
@@ -7,8 +8,8 @@
   --third-color : #999999;
   --button-color: #0055FF;
   --box-shadow: #e1e1e1 0px 1px 4px, #e1e1e1 0px 2px 4px, #e1e1e1 0px 2px 4px;
-  --font-title : 'Mukta', sans-serif;
-  --font-text :'Josefin Sans', sans-serif;
+  --font-title : 'Courgette', cursive;
+  --font-text :'Galdeano', sans-serif;
 }
 
 
@@ -294,7 +295,7 @@ width: 90%;
   height: 10rem;
 }
 .contact_form button {
-  width: 10rem;
+  width: 70vw;
   margin: 1rem auto;
 }
 
@@ -310,6 +311,9 @@ width: 90%;
   padding: 0.35rem 0;
   background-color: inherit;
   color: inherit;
+}
+.contact {
+  border-radius: 50%;
 }
 
 .footer li, .footer a, .footer div {
@@ -373,6 +377,13 @@ width: 90%;
   box-shadow: var(--box-shadow);
   border-radius: 50%;
   margin: 2rem;
+}
+
+.landing_page h1 {
+  font-size: 4rem;
+}
+.landing_page h2 {
+  font-size: 1.5rem;
 }
 .about_me {
   display: flex;

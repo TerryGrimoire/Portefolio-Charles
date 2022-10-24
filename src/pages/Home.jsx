@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
+import Helmet from "react-helmet";
 import Me from "./Me";
 import competencesData from "../data/competencesData";
 import projetsData from "../data/projetsData";
@@ -36,6 +37,14 @@ export default function Home() {
   ));
   return (
     <main>
+      <Helmet>
+        <title> Charles Girouard | Accueil </title>
+        <link rel="canonical" href="https://charlesgirouard.fr" />
+        <meta
+          name="description"
+          content="Charles Girouard, Data Analyst et Data Scientist, vous invite à découvrir son portefolio à travers ses expériences, ses compétences et ses projets."
+        />
+      </Helmet>
       <section className="landing_page relative">
         <h1>Charles Girouard</h1>
         <h2>Data Analyst | Data Scientist</h2>

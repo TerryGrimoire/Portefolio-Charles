@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Helmet from "react-helmet";
 import competencesData from "../data/competencesData";
 
 function Competences() {
@@ -7,6 +8,14 @@ function Competences() {
   }, []);
   return (
     <section>
+      <Helmet>
+        <title> Charles Girouard | Compétences </title>
+        <link rel="canonical" href="https://charlesgirouard.fr/Competences" />
+        <meta
+          name="description"
+          content="Charles Girouard, Data Analyst et Data Scientist, vous invite à découvrir son portefolio à travers ses expériences, ses compétences et ses projets."
+        />
+      </Helmet>
       <article className="flex-col align-center justify-center background2">
         <h2>Les compétences</h2>
 

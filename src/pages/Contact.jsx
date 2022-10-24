@@ -8,9 +8,7 @@ function Contact() {
   return (
     <div className="flex flex-col align-center">
       <h2>Nous joindre</h2>
-      <section>
-        <Form />
-      </section>
+      <Form />
     </div>
   );
 }

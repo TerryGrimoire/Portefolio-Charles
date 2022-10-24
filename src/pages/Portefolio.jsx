@@ -8,7 +8,7 @@ function Portefolio() {
   return (
     <section className="flex-col justify-center align-center">
       <h2>Mon Portefolio</h2>
-      <div>
+      <div className="desktop_portefolio_container">
         {projetsData.map((el) => (
           <a
             href={el.link}
@@ -18,7 +18,7 @@ function Portefolio() {
           >
             <h3>{el.name}</h3>
             <img src={el.src} alt={el.alt} className="projets" />
-            <p>{el.description}</p>
+            <small>{el.description}</small>
           </a>
         ))}
       </div>

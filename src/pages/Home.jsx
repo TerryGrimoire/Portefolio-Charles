@@ -12,6 +12,15 @@ export default function Home() {
 
   const handleDragStart = (e) => e.preventDefault();
 
+  const responsive = {
+    0: {
+      items: 2,
+    },
+    1024: {
+      items: 10,
+    },
+  };
+
   const items = projetsData.map((el) => (
     <a
       href={el.link}
@@ -22,7 +31,7 @@ export default function Home() {
     >
       <h3>{el.name}</h3>
       <img src={el.src} alt={el.alt} className="projets" />
-      <p>{el.description}</p>
+      <small>{el.description}</small>
     </a>
   ));
   return (
@@ -38,7 +47,7 @@ export default function Home() {
 
       <section>
         <article className="flex-col align-center justify-center background2 background">
-          <h2>Les compétences</h2>
+          <h2>Mes compétences</h2>
 
           <div className="competences_container flex wrap justify-center align-center">
             {competencesData.map((data) => (
@@ -50,7 +59,7 @@ export default function Home() {
           </div>
         </article>
       </section>
-      <section className="flex-col justify-center align-center margin1r0">
+      <section className="flex-col justify-center align-center margin5r0">
         <h2>Mes projets</h2>
         <AliceCarousel
           autoPlay
@@ -60,6 +69,7 @@ export default function Home() {
           infinite
           animationDuration="6000"
           mouseTracking
+          responsive={responsive}
           items={items}
         />
       </section>

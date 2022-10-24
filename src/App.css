@@ -302,7 +302,6 @@ width: 90%;
 
 .footer {
   padding: 1rem 2rem;
-  align-items: flex-start;
   background-color: var(--secondary-bg-color);
   color: var(--main-bg-color);
 }
@@ -360,18 +359,93 @@ width: 90%;
     display: initial;
   }
 
-  body {
-    padding: 0 5rem
-  }
-
 /********************************************************************* NAVBAR *********************************************************************/ 
-.navbar {
-  padding: 2rem 0;
-
-}
 
 .navbar * {
-  padding: 0rem 2rem;
+  padding: 0rem 1rem;
 }
-  
+
+/********************************************************************* HOME *********************************************************************/ 
+
+.portrait {
+  width: 35vw;
+  height: 35vw;
+  box-shadow: var(--box-shadow);
+  border-radius: 50%;
+  margin: 2rem;
+}
+.about_me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 3rem;
+}
+.chiffres_container {
+  align-items: flex-start;
+  padding: 0 5rem;
+}
+
+/********************************************************************* COMPETENCES *********************************************************************/ 
+.background2 {
+  padding: 0rem 20rem 5rem;
+}
+.background2 .competences {
+  width: 10vw;
+  height: 10vw;
+  padding: 1rem;
+  background-color: var(--main-bg-color);
+  border-radius: 50%;
+  box-shadow: var(--box-shadow);
+  margin: 2rem 1rem;
+}
+
+.background, .background * {
+  background-color: var(--secondary-bg-color);
+  color: var(--main-bg-color);
+}
+
+
+.projets {
+  height: 12vw;
+  margin: 2rem;
+}
+.contact {
+  border-radius: 50%;
+}
+
+.grimoire_numerique {
+  color: var(--button-color);
+  margin-left: 0.5rem;
+  text-decoration: underline;
+}
+
+.desktop_portefolio_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem 10rem;
+}
+.desktop_portefolio_container  a{
+margin: 2rem;
+padding: 2rem;
+border-radius: 1rem;
+box-shadow: var(--box-shadow);
+}
+
+
+
+/********************************************************************* CONTACT *********************************************************************/ 
+
+.contact_form button {
+  width: 30vw;
+  margin: 1rem auto;
+}
+.blue {
+  background-color: var(--button-color);
+  color:var(--main-bg-color)
+}
 }

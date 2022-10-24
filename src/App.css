@@ -193,7 +193,7 @@ button.croix {
 
   .background_img {
     position: absolute;
-    background-image: url("src/assets/nantes.jpg");
+    background-image: url("https://cdn.pixabay.com/photo/2018/04/08/16/10/nantes-3301607_1280.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
